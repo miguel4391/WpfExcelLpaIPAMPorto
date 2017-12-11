@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="https://elpusonlineporto.ipam.pt/websapi/websapi.asmx?wsdl" docRef="https://elpusonlineporto.ipam.pt/websapi/websapi.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="https://elpusonlineporto.ipam.pt/websapi/websapi.asmx" xmlns:q1="http://tempuri.org/WebServiceSAPI/Service1" binding="q1:WebSapiSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="https://elpusonlineporto.ipam.pt/websapi/websapi.asmx" xmlns:q2="http://tempuri.org/WebServiceSAPI/Service1" binding="q2:WebSapiSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

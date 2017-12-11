@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="https://elpusonlineporto.ipam.pt/websapi/websapi.asmx?wsdl" filename="websapi.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="https://elpusonlineporto.ipam.pt/websapi/websapi.asmx?disco" filename="websapi.disco" />
+  </Results>
+</DiscoveryClientResultsFile>

@@ -1,0 +1,13 @@
+C:\Users\200010122\Documents\Visual Studio 2017\Projects\WpfExcelLpaIPAMPorto\WpfExcelLpaIPAMPorto\obj\Debug\MainWindow.baml
+C:\Users\200010122\Documents\Visual Studio 2017\Projects\WpfExcelLpaIPAMPorto\WpfExcelLpaIPAMPorto\obj\Debug\MainWindow.g.cs
+C:\Users\200010122\Documents\Visual Studio 2017\Projects\WpfExcelLpaIPAMPorto\WpfExcelLpaIPAMPorto\obj\Debug\App.g.cs
+C:\Users\200010122\Documents\Visual Studio 2017\Projects\WpfExcelLpaIPAMPorto\WpfExcelLpaIPAMPorto\obj\Debug\WpfExcelLpaIPAMPorto_MarkupCompile.cache
+C:\Users\200010122\Documents\Visual Studio 2017\Projects\WpfExcelLpaIPAMPorto\WpfExcelLpaIPAMPorto\obj\Debug\WpfExcelLpaIPAMPorto.g.resources
+C:\Users\200010122\Documents\Visual Studio 2017\Projects\WpfExcelLpaIPAMPorto\WpfExcelLpaIPAMPorto\obj\Debug\WpfExcelLpaIPAMPorto.Properties.Resources.resources
+C:\Users\200010122\Documents\Visual Studio 2017\Projects\WpfExcelLpaIPAMPorto\WpfExcelLpaIPAMPorto\obj\Debug\WpfExcelLpaIPAMPorto.csproj.GenerateResource.Cache
+C:\Users\200010122\Documents\Visual Studio 2017\Projects\WpfExcelLpaIPAMPorto\WpfExcelLpaIPAMPorto\obj\Debug\WpfExcelLpaIPAMPorto.csproj.CoreCompileInputs.cache
+C:\Users\200010122\Documents\Visual Studio 2017\Projects\WpfExcelLpaIPAMPorto\WpfExcelLpaIPAMPorto\bin\Debug\WpfExcelLpaIPAMPorto.exe.config
+C:\Users\200010122\Documents\Visual Studio 2017\Projects\WpfExcelLpaIPAMPorto\WpfExcelLpaIPAMPorto\bin\Debug\WpfExcelLpaIPAMPorto.exe
+C:\Users\200010122\Documents\Visual Studio 2017\Projects\WpfExcelLpaIPAMPorto\WpfExcelLpaIPAMPorto\bin\Debug\WpfExcelLpaIPAMPorto.pdb
+C:\Users\200010122\Documents\Visual Studio 2017\Projects\WpfExcelLpaIPAMPorto\WpfExcelLpaIPAMPorto\obj\Debug\WpfExcelLpaIPAMPorto.exe
+C:\Users\200010122\Documents\Visual Studio 2017\Projects\WpfExcelLpaIPAMPorto\WpfExcelLpaIPAMPorto\obj\Debug\WpfExcelLpaIPAMPorto.pdb

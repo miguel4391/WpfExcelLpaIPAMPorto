@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/WebServiceSAPI/Service1" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/WebServiceSAPI/Service1" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/WebServiceSAPI/Service1">
+      <s:element name="Execute">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Funcao" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="NivelComp" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Certificado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FormatoOutput" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PEntrada" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PSaida" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExecuteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExecuteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StreamExecute">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Funcao" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="NivelComp" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Certificado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FormatoOutput" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PEntrada" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PSaida" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BytesSaida" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StreamExecuteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StreamExecuteResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BytesSaida" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StreamPut">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Funcao" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="NivelComp" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Certificado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FormatoOutput" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PEntrada" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PSaida" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BytesEntrada" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StreamPutResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StreamPutResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFunctionDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NomeFunc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FormatoInput" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FormatoOutput" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFunctionDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFunctionDetailResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFunctionsList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FormatoInput" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FormatoOutput" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFunctionsListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFunctionsListResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ExecuteSoapIn">
+    <wsdl:part name="parameters" element="tns:Execute" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteSoapOut">
+    <wsdl:part name="parameters" element="tns:ExecuteResponse" />
+  </wsdl:message>
+  <wsdl:message name="StreamExecuteSoapIn">
+    <wsdl:part name="parameters" element="tns:StreamExecute" />
+  </wsdl:message>
+  <wsdl:message name="StreamExecuteSoapOut">
+    <wsdl:part name="parameters" element="tns:StreamExecuteResponse" />
+  </wsdl:message>
+  <wsdl:message name="StreamPutSoapIn">
+    <wsdl:part name="parameters" element="tns:StreamPut" />
+  </wsdl:message>
+  <wsdl:message name="StreamPutSoapOut">
+    <wsdl:part name="parameters" element="tns:StreamPutResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFunctionDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFunctionDetail" />
+  </wsdl:message>
+  <wsdl:message name="GetFunctionDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFunctionDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFunctionsListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFunctionsList" />
+  </wsdl:message>
+  <wsdl:message name="GetFunctionsListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFunctionsListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteHttpGetIn">
+    <wsdl:part name="Funcao" type="s:string" />
+    <wsdl:part name="NivelComp" type="s:string" />
+    <wsdl:part name="Certificado" type="s:string" />
+    <wsdl:part name="FormatoOutput" type="s:string" />
+    <wsdl:part name="PEntrada" type="s:string" />
+    <wsdl:part name="PSaida" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFunctionDetailHttpGetIn">
+    <wsdl:part name="NomeFunc" type="s:string" />
+    <wsdl:part name="FormatoInput" type="s:string" />
+    <wsdl:part name="FormatoOutput" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFunctionDetailHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFunctionsListHttpGetIn">
+    <wsdl:part name="FormatoInput" type="s:string" />
+    <wsdl:part name="FormatoOutput" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFunctionsListHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteHttpPostIn">
+    <wsdl:part name="Funcao" type="s:string" />
+    <wsdl:part name="NivelComp" type="s:string" />
+    <wsdl:part name="Certificado" type="s:string" />
+    <wsdl:part name="FormatoOutput" type="s:string" />
+    <wsdl:part name="PEntrada" type="s:string" />
+    <wsdl:part name="PSaida" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFunctionDetailHttpPostIn">
+    <wsdl:part name="NomeFunc" type="s:string" />
+    <wsdl:part name="FormatoInput" type="s:string" />
+    <wsdl:part name="FormatoOutput" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFunctionDetailHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFunctionsListHttpPostIn">
+    <wsdl:part name="FormatoInput" type="s:string" />
+    <wsdl:part name="FormatoOutput" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFunctionsListHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="WebSapiSoap">
+    <wsdl:operation name="Execute">
+      <wsdl:input message="tns:ExecuteSoapIn" />
+      <wsdl:output message="tns:ExecuteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="StreamExecute">
+      <wsdl:input message="tns:StreamExecuteSoapIn" />
+      <wsdl:output message="tns:StreamExecuteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="StreamPut">
+      <wsdl:input message="tns:StreamPutSoapIn" />
+      <wsdl:output message="tns:StreamPutSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFunctionDetail">
+      <wsdl:input message="tns:GetFunctionDetailSoapIn" />
+      <wsdl:output message="tns:GetFunctionDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFunctionsList">
+      <wsdl:input message="tns:GetFunctionsListSoapIn" />
+      <wsdl:output message="tns:GetFunctionsListSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WebSapiHttpGet">
+    <wsdl:operation name="Execute">
+      <wsdl:input message="tns:ExecuteHttpGetIn" />
+      <wsdl:output message="tns:ExecuteHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFunctionDetail">
+      <wsdl:input message="tns:GetFunctionDetailHttpGetIn" />
+      <wsdl:output message="tns:GetFunctionDetailHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFunctionsList">
+      <wsdl:input message="tns:GetFunctionsListHttpGetIn" />
+      <wsdl:output message="tns:GetFunctionsListHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WebSapiHttpPost">
+    <wsdl:operation name="Execute">
+      <wsdl:input message="tns:ExecuteHttpPostIn" />
+      <wsdl:output message="tns:ExecuteHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFunctionDetail">
+      <wsdl:input message="tns:GetFunctionDetailHttpPostIn" />
+      <wsdl:output message="tns:GetFunctionDetailHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFunctionsList">
+      <wsdl:input message="tns:GetFunctionsListHttpPostIn" />
+      <wsdl:output message="tns:GetFunctionsListHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebSapiSoap" type="tns:WebSapiSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Execute">
+      <soap:operation soapAction="http://tempuri.org/WebServiceSAPI/Service1/Execute" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StreamExecute">
+      <soap:operation soapAction="http://tempuri.org/WebServiceSAPI/Service1/StreamExecute" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StreamPut">
+      <soap:operation soapAction="http://tempuri.org/WebServiceSAPI/Service1/StreamPut" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFunctionDetail">
+      <soap:operation soapAction="http://tempuri.org/WebServiceSAPI/Service1/GetFunctionDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFunctionsList">
+      <soap:operation soapAction="http://tempuri.org/WebServiceSAPI/Service1/GetFunctionsList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebSapiSoap12" type="tns:WebSapiSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Execute">
+      <soap12:operation soapAction="http://tempuri.org/WebServiceSAPI/Service1/Execute" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StreamExecute">
+      <soap12:operation soapAction="http://tempuri.org/WebServiceSAPI/Service1/StreamExecute" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StreamPut">
+      <soap12:operation soapAction="http://tempuri.org/WebServiceSAPI/Service1/StreamPut" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFunctionDetail">
+      <soap12:operation soapAction="http://tempuri.org/WebServiceSAPI/Service1/GetFunctionDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFunctionsList">
+      <soap12:operation soapAction="http://tempuri.org/WebServiceSAPI/Service1/GetFunctionsList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebSapiHttpGet" type="tns:WebSapiHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="Execute">
+      <http:operation location="/Execute" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFunctionDetail">
+      <http:operation location="/GetFunctionDetail" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFunctionsList">
+      <http:operation location="/GetFunctionsList" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebSapiHttpPost" type="tns:WebSapiHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="Execute">
+      <http:operation location="/Execute" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFunctionDetail">
+      <http:operation location="/GetFunctionDetail" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFunctionsList">
+      <http:operation location="/GetFunctionsList" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebSapi">
+    <wsdl:port name="WebSapiSoap" binding="tns:WebSapiSoap">
+      <soap:address location="https://elpusonlineporto.ipam.pt/websapi/websapi.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebSapiSoap12" binding="tns:WebSapiSoap12">
+      <soap12:address location="https://elpusonlineporto.ipam.pt/websapi/websapi.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebSapiHttpGet" binding="tns:WebSapiHttpGet">
+      <http:address location="https://elpusonlineporto.ipam.pt/websapi/websapi.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebSapiHttpPost" binding="tns:WebSapiHttpPost">
+      <http:address location="https://elpusonlineporto.ipam.pt/websapi/websapi.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

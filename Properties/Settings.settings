@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WpfExcelLpaIPAMPorto.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="WpfExcelLpaIPAMPorto_pt_ipam_elpusonlineporto_WebSapi" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://elpusonlineporto.ipam.pt/websapi/websapi.asmx</Value>
+    </Setting>
+    <Setting Name="WpfExcelLpaIPAMPorto_pt_ipam_elpusonlineporto1_WebSapi" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://elpusonlineporto.ipam.pt/websapi/websapi.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
